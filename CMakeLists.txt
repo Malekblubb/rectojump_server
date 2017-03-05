@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(rectojump_server)
+
+# collect files
+file(GLOB_RECURSE SRC_LIST "./include/*" "./src/*")
+include_directories("./include" "./external/mlk/include")
+
+add_executable(${PROJECT_NAME} ${SRC_LIST})
+
+# set compiler flags
+set(CMAKE_CXX_FLAGS "-std=c++1z -O3")
+set(CMAKE_CXX_COMPILER "clang++")
