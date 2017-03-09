@@ -1,9 +1,13 @@
-#include <iostream>
+//
+// Copyright (c) 2017 Christoph Malek
+// See LICENSE for more information.
+//
 
-using namespace std;
+#include <rjserver/server.hpp>
 
-int main(int argc, char *argv[])
+int main()
 {
-	cout << "Hello World!" << endl;
+	rjs::server s;
+	s.run();
 	return 0;
 }
